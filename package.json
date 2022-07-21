@@ -13,7 +13,7 @@
     "jquery": "^3.6.0",
     "mdb-react-ui-kit": "^4.1.0",
     "particles-bg": "^2.5.5",
-    "react": "^18.1.0",
+    "react": "^18.2.0",
     "react-bootstrap": "^2.4.0",
     "react-dom": "^18.1.0",
     "react-ga": "^3.3.0",
@@ -51,13 +51,13 @@
     ]
   },
   "devDependencies": {
-    "chokidar": "^3.5.1",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^14.2.0",
     "@types/jest": "^27.5.2",
     "@types/node": "^17.0.40",
     "@types/react": "^18.0.12",
-    "@types/react-dom": "^18.0.5"
+    "@types/react-dom": "^18.0.5",
+    "chokidar": "^3.5.1"
   }
 }

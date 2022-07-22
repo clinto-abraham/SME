@@ -13,7 +13,7 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import { useNavigate } from "react-router-dom";
-
+import logo from '../../SabariLogo.png';
 // const pages = ['Our Services', 'Contact', 'About Us', 'Careers'];
 const pages = [
   { component: "Our Services", url: "/our-services", id: 0 },
@@ -55,24 +55,27 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   return (
-    <AppBar position="static">
+    <AppBar position="static" className="AppBar">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
+          {/* <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} /> */}
+          <img src={logo} className="App-logo" alt="logo" />
           <Typography
-            variant="h6"
+            variant="h5"
             noWrap
             component="a"
             // href={() => navigate('/')}
             onClick={() => navigate('/')}
             sx={{
-              mr: 2,
+              mr: 30,
               display: { xs: "none", md: "flex" },
               fontFamily: "monospace",
               fontWeight: 700,
-              letterSpacing: ".3rem",
+              letterSpacing: ".4rem",
               color: "inherit",
               textDecoration: "none",
+              marginLeft: '160px',
+              marginTop: '40px',
             }}
           >
             SABRI MARINE ENTERPRISE
@@ -137,6 +140,8 @@ const Navbar = () => {
               letterSpacing: ".3rem",
               color: "inherit",
               textDecoration: "none",
+              marginLeft: '160px',
+              marginTop: '40px',
             }}
           >
             SABRI MARINE ENTERPRISE

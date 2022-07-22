@@ -15,19 +15,10 @@ function Header() {
       <MDBCarouselInner>
 
 
-      <MDBCarouselItem>
-          <MDBCarouselElement height={650}  src='https://sinay.ai/wp-content/uploads/2021/06/Porte-container_shutterstock.jpg.webp' alt='...' />
-          <MDBCarouselCaption>
-          <h1 className="responsive-headline">{"Sabri Marine Enterprise"}</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </MDBCarouselCaption>
-        </MDBCarouselItem>
-
-
         <MDBCarouselItem>
           <MDBCarouselElement height={650}  src='https://www.searates.com/design/images/import/blog-uploads/img-1637053505-7858.jpg' alt='...' />
           <MDBCarouselCaption>
-          <h1 className="responsive-headline">{"Sabri Marine Enterprise"}</h1>
+          <h1 className="responsive-headline">{"Sabari Marine Enterprise"}</h1>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </MDBCarouselCaption>
         </MDBCarouselItem>
@@ -36,7 +27,7 @@ function Header() {
         <MDBCarouselItem>
           <MDBCarouselElement height={650}  src='https://www.searates.com/design/images/import/blog-uploads/img-1637053512-2625.jpg' alt='...' />
           <MDBCarouselCaption>
-          <h1 className="responsive-headline">{"Sabri Marine Enterprise"}</h1>
+          <h1 className="responsive-headline">{"Sabari Marine Enterprise"}</h1>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </MDBCarouselCaption>
         </MDBCarouselItem>
@@ -46,9 +37,9 @@ function Header() {
         <MDBCarouselItem className='active'>
           <MDBCarouselElement height={650}  src='https://mdbootstrap.com/img/Photos/Slides/img%20(19).webp' alt='...' />
           <MDBCarouselCaption>
-        <h1 className="responsive-headline">{"Sabri Marine Enterprise"}</h1>
+        <h1 className="responsive-headline">{"Sabari Marine Enterprise"}</h1>
          
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            <p>Bikeeeee</p>
           </MDBCarouselCaption>
         </MDBCarouselItem>
 
@@ -56,35 +47,24 @@ function Header() {
         <MDBCarouselItem>
           <MDBCarouselElement height={650} src={`https://aambpublicoceanservice.blob.core.windows.net/oceanserviceprod/news/apr22/evergreen-ship-header.jpg`} alt="don't" />
           <MDBCarouselCaption>
-          <h1 className="responsive-headline">{"Sabri Marine Enterprise"}</h1>
+          <h1 className="responsive-headline">{"Sabari Marine Enterprise"}</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </MDBCarouselCaption>
         </MDBCarouselItem>
 
-    
-        
-
-
         <MDBCarouselItem>
           <MDBCarouselElement height={650}  src='https://www.ips-journal.eu/fileadmin/_processed_/9/9/csm_Reuters_Container_ship_inflation_7887969eb2.jpg' alt='...' />
           <MDBCarouselCaption>
-          <h1 className="responsive-headline">{"Sabri Marine Enterprise"}</h1>
+          <h1 className="responsive-headline">{"Sabari Marine Enterprise"}</h1>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </MDBCarouselCaption>
         </MDBCarouselItem>
         
-        <MDBCarouselItem>
-          <MDBCarouselElement height={650}  src='https://mdbootstrap.com/img/Photos/Slides/img%20(40).webp' alt='...' />
-          <MDBCarouselCaption>
-          <h1 className="responsive-headline">{"Sabri Marine Enterprise"}</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </MDBCarouselCaption>
-        </MDBCarouselItem>
-
+    
         <MDBCarouselItem>
           <MDBCarouselElement height={650}  src=' https://www.searates.com/design/images/import/blog/0.37052700%201591688361.jpg' alt='...' />
           <MDBCarouselCaption>
-          <h1 className="responsive-headline">{"Sabri Marine Enterprise"}</h1>
+          <h1 className="responsive-headline">{"Sabari Marine Enterprise"}</h1>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </MDBCarouselCaption>
         </MDBCarouselItem>

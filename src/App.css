@@ -3,13 +3,36 @@
 }
 
 .App-logo {
-  height: 20vmin;
+  height: 12vmin;
   pointer-events: none;
   position: absolute;
-  left: 20px;
-  top: 20px;
+  left: 1px;
+  top: 14px;
 }
 
+.AppBar{
+  height: 16.5vmin;
+  padding: 0.5em;
+}
+
+.AboutUs {
+  margin: 5em;
+  padding: 7em;
+}
+
+.contact{
+  background-color: rgb(34, 202, 239);
+}
+
+.contact-form{
+  width: 75%;
+  
+}
+
+.space{
+  margin: 50px;
+  padding: 0.5em;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-float infinite 3s ease-in-out;

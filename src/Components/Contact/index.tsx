@@ -1,148 +1,203 @@
-import React, { Component } from "react";
+import React from "react";
 // @ts-ignore
 import { Fade, Slide } from "react-reveal";
+import { useForm } from "react-hook-form";
+import {
+  Button,
+  Grid,
+  TextField,
+  Typography,
+  ButtonBase,
+  Box,
+} from "@mui/material";
+import { styled } from "@mui/material/styles";
 
-function Contact () {
+const images = [
+  {
+    url: "/static/images/buttons/breakfast.jpg",
+    title: "Submit",
+    width: "100%",
+  },
 
+];
 
-    return (
-      <section id="contact">
-        <Fade bottom duration={1000}>
-          <div className="row section-head">
-            <div className="two columns header-col">
-              <h1>
-                <span>Get In Touch.</span>
-              </h1>
-            </div>
+const ImageButton = styled(ButtonBase)(({ theme }) => ({
+  position: "relative",
+  height: 200,
+  [theme.breakpoints.down("sm")]: {
+    width: "100% !important", // Overrides inline-style
+    height: 100,
+  },
+  "&:hover, &.Mui-focusVisible": {
+    zIndex: 1,
+    "& .MuiImageBackdrop-root": {
+      opacity: 0.15,
+    },
+    "& .MuiImageMarked-root": {
+      opacity: 0,
+    },
+    "& .MuiTypography-root": {
+      border: "4px solid currentColor",
+    },
+  },
+}));
 
-            <div className="ten columns">
-              <p className="lead">{"message"}</p>
-            </div>
+const ImageSrc = styled("span")({
+  position: "absolute",
+  left: 0,
+  right: 0,
+  top: 0,
+  bottom: 0,
+  backgroundSize: "cover",
+  backgroundPosition: "center 40%",
+});
+
+const Image = styled("span")(({ theme }) => ({
+  position: "absolute",
+  left: 0,
+  right: 0,
+  top: 0,
+  bottom: 0,
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  color: theme.palette.common.white,
+}));
+
+const ImageBackdrop = styled("span")(({ theme }) => ({
+  position: "absolute",
+  left: 0,
+  right: 0,
+  top: 0,
+  bottom: 0,
+  backgroundColor: theme.palette.common.black,
+  opacity: 0.4,
+  transition: theme.transitions.create("opacity"),
+}));
+
+const ImageMarked = styled("span")(({ theme }) => ({
+  height: 3,
+  width: 18,
+  backgroundColor: theme.palette.common.white,
+  position: "absolute",
+  bottom: -2,
+  left: "calc(50% - 9px)",
+  transition: theme.transitions.create("opacity"),
+}));
+
+function Contact() {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+  const onSubmit = (data: any) => console.log(data);
+  console.log(errors);
+
+  return (
+    <section id="contact" className="contact">
+      <Fade bottom duration={1000}>
+        <div className="row section-head">
+          <div className="two columns header-col">
+            <h1>
+              <span>Get In Touch.</span>
+            </h1>
           </div>
-        </Fade>
-
-        <div className="row">
-          <Slide left duration={1000}>
-            <div className="eight columns">
-              <form action="" method="post" id="contactForm" name="contactForm">
-                <fieldset>
-                  <div>
-                    <label htmlFor="contactName">
-                      Name <span className="required">*</span>
-                    </label>
-                    <input
-                      type="text"
-                      defaultValue=""
-                      size={35}
-                      id="contactName"
-                      name="contactName"
-                      onChange={(e) => console.log(e)}
-                    />
-                  </div>
-
-                  <div>
-                    <label htmlFor="contactEmail">
-                      Email <span className="required">*</span>
-                    </label>
-                    <input
-                      type="text"
-                      defaultValue=""
-                      size={35}
-                      id="contactEmail"
-                      name="contactEmail"
-                      onChange={(e) => console.log(e)}
-                    />
-                  </div>
-
-                  <div>
-                    <label htmlFor="contactSubject">Subject</label>
-                    <input
-                      type="text"
-                      defaultValue=""
-                      size={35}
-                      id="contactSubject"
-                      name="contactSubject"
-                      onChange={(e) => console.log(e)}
-                    />
-                  </div>
-
-                  <div>
-                    <label htmlFor="contactMessage">
-                      Message <span className="required">*</span>
-                    </label>
-                    <textarea
-                      cols={50}
-                      rows={15}
-                      id="contactMessage"
-                      name="contactMessage"
-                    ></textarea>
-                  </div>
-
-                  <div>
-                    <button className="submit">Submit</button>
-                    <span id="image-loader">
-                      <img alt="" src="images/loader.gif" />
-                    </span>
-                  </div>
-                </fieldset>
-              </form>
-
-              <div id="message-warning"> Error boy</div>
-              <div id="message-success">
-                <i className="fa fa-check"></i>Your message was sent, thank you!
-                <br />
-              </div>
-            </div>
-          </Slide>
-
-          <Slide right duration={1000}>
-            <aside className="four columns footer-widgets">
-              <div className="widget widget_contact">
-                <h4>Address and Phone</h4>
-                <p className="address">
-                  {"name"}
-                  <br />
-                  {"street"} <br />
-                  {"city"}, {"state"} {"zip"}
-                  <br />
-                  <span>{"phone"}</span>
-                </p>
-              </div>
-
-              <div className="widget widget_tweets">
-                <h4 className="widget-title">Latest Tweets</h4>
-                <ul id="twitter">
-                  <li>
-                    <span>
-                      This is Photoshop's version of Lorem Ipsum. Proin gravida
-                      nibh vel velit auctor aliquet. Aenean sollicitudin, lorem
-                      quis bibendum auctor, nisi elit consequat ipsum
-                      <a href="./">http://t.co/CGIrdxIlI3</a>
-                    </span>
-                    <b>
-                      <a href="./">2 Days Ago</a>
-                    </b>
-                  </li>
-                  <li>
-                    <span>
-                      Sed ut perspiciatis unde omnis iste natus error sit
-                      voluptatem accusantium doloremque laudantium, totam rem
-                      aperiam, eaque ipsa quae ab illo inventore veritatis et
-                      quasi
-                      <a href="./">http://t.co/CGIrdxIlI3</a>
-                    </span>
-                    <b>
-                      <a href="./">3 Days Ago</a>
-                    </b>
-                  </li>
-                </ul>
-              </div>
-            </aside>
-          </Slide>
         </div>
-      </section>
-    );
-  }
+      </Fade>
 
+      <Slide left duration={1000}>
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <Grid container className="contact-form">
+            <Grid item xs={12} className='space'>
+              <TextField
+                id="outlined-basic"
+                label="First name"
+                variant="outlined"
+                {...register("First name", { required: true, maxLength: 80 })}
+              />
+            </Grid>
+            <Grid item xs={12} className='space'>
+              <TextField
+                id="outlined-basic"
+                label="Last name"
+                variant="outlined"
+                {...register("Last name", { required: true, maxLength: 100 })}
+              />
+            </Grid>
+            <Grid item xs={12} className='space'>
+              <TextField
+                id="outlined-basic"
+                label="Email"
+                variant="outlined"
+                {...register("Email", {
+                  required: true,
+                  pattern: /^\S+@\S+$/i,
+                })}
+              />
+            </Grid>
+            <Grid item xs={12} className='space'>
+              <TextField
+                id="outlined-basic"
+                label="Mobile number"
+                variant="outlined"
+                {...register("Mobile number", {
+                  required: true,
+                  minLength: 6,
+                  maxLength: 12,
+                })}
+              />
+            </Grid>
+          
+            <Box
+            sx={{
+              display: "flex",
+              flexWrap: "wrap",
+              minWidth: 300,
+              width: "100%",
+            }}
+          >
+            {images.map((image) => (
+              <ImageButton
+                focusRipple
+                key={image.title}
+                style={{
+                  width: image.width,
+                }}
+              >
+                <ImageSrc style={{ backgroundImage: `url(${image.url})` }} />
+                <ImageBackdrop className="MuiImageBackdrop-root" />
+                <Image>
+                  <Typography
+                    component="span"
+                    variant="subtitle1"
+                    color="inherit"
+                    sx={{
+                      position: "relative",
+                      p: 4,
+                      pt: 2,
+                      pb: (theme) => `calc(${theme.spacing(1)} + 6px)`,
+                    }}
+                  >
+                    {image.title}
+                    <ImageMarked className="MuiImageMarked-root" />
+                  </Typography>
+                </Image>
+              </ImageButton>
+            ))}
+          </Box>
+
+
+            {/* <Grid item xs={12} className='space'>
+              <Button type="submit">Submit</Button>{" "}
+            </Grid> */}
+          </Grid>
+
+         
+        </form>
+      </Slide>
+    </section>
+  );
+}
 
 export default Contact;

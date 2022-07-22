@@ -23,6 +23,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Navbar />
+        
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="our-services" element={<OurServices />} />   
@@ -37,6 +38,7 @@ function App() {
           <Route path="logout" element={<SignUp />} />
         </Routes>
         {/* <Home /> */}
+        
         <Footer />
       </BrowserRouter>
     </div>
@@ -45,7 +47,7 @@ function App() {
 
 export default App;
 
-// import logo from './logo.svg';
+// 
 // import { Counter } from './features/Components/counter';
 // import BottomNavbar from './features/Views/Navbar/BottomNavbar';
 // import SlideNavbar from './features/Views/Navbar/SlideNavbar';
@@ -55,7 +57,7 @@ export default App;
 //
 
 // {/* <header className="App-header">
-//   <img src={logo} className="App-logo" alt="logo" />
+//   
 //  <SlideNavbar />
 //  <CarouselBusiness />
 //  <TopNavbar />
